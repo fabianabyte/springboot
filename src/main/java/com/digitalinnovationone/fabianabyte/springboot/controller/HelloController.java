@@ -10,5 +10,10 @@ public class HelloController {
    public String helloMessage(){
         return "Hello Fabianabyte!";
     }
+    @GetMapping("/teste")
+   public String meMome(){
+        return "No teste!";
+    }
+
 
 }
