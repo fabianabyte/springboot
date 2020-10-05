@@ -10,8 +10,16 @@ public class AppController {
     @Value("${app.message}")
     private String appMessage;
 
+    @Value("${ENV_DB:NENHUMA}")
+    private String dbVariavelDeAmbiente;
+
     @GetMapping("/appMessage")
     public String getAppMessage(){
         return appMessage;
+    }
+
+    @GetMapping("/variavelAmbienteDB")
+    public String getDbVariavelDeAmbiente(){
+        return dbVariavelDeAmbiente;
     }
 }
